@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Crif SpA (Crif SpA) -->
+<xs:schema xmlns:cr="urn:crif-cribiscom-investigationprofile-2015-10-12" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-investigationprofile-2015-10-12" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="IPP">
+		<xs:annotation>
+			<xs:documentation>Investigation Product Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ProductCode" type="cr:ProductDefinition"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ProductDefinition">
+		<xs:annotation>
+			<xs:documentation>Silver Investigation Product Definition</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="PC" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

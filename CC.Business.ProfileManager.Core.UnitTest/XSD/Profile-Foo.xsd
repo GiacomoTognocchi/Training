@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:pf="urn:profile-foo:2009" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pb="urn:profile-base:2009" targetNamespace="urn:profile-foo:2009" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="urn:profile-base:2009" schemaLocation="Profile-Base.xsd"/>
+	<xs:element name="FooProfile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UIColors" type="pb:UIColors"/>
+				<xs:element name="Timeout" type="xs:integer"/>
+				<xs:element name="FreeOfCharge" type="xs:boolean"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

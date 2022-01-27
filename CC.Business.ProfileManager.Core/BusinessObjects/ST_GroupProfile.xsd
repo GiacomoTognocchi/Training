@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:cg="urn:crif-cribiscom-companiesgroup-2009-05-12" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-companiesgroup-2009-05-12" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DGP">
+		<xs:annotation>
+			<xs:documentation>Distributor Groups Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="G" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Groups</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="S" minOccurs="2" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Subscribers</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="SFN" type="xs:string" use="required">
+										<xs:annotation>
+											<xs:documentation>Subscriber full name</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="E" type="xs:boolean" use="required">
+										<xs:annotation>
+											<xs:documentation>IsEnable</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="CP">
+								<xs:annotation>
+									<xs:documentation>Storage Group Policy</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute ref="cg:SP" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PP" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Storage Product Policy</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="PC" type="xs:string" use="required">
+										<xs:annotation>
+											<xs:documentation>Product Code</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute ref="cg:SP"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="GID" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Group Id</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="N" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Name</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:attribute name="SP">
+		<xs:annotation>
+			<xs:documentation>Share Policy</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="OnDemand"/>
+				<xs:enumeration value="Automatically"/>
+				<xs:enumeration value="None"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+</xs:schema>

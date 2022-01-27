@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:dp="urn:crif-cribiscom-datapacket-2012-06-01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-datapacket-2012-06-01" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DataPacketProfile">
+		<xs:annotation>
+			<xs:documentation>Data packet profile definition </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request">
+					<xs:complexType>
+						<xs:attribute name="IsRequired" type="xs:boolean" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Accounting">
+					<xs:complexType>
+						<xs:attribute name="IsRequired" type="xs:boolean" use="required"/>
+						<xs:attribute name="AccountingType" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="ONLINE"/>
+									<xs:enumeration value="OFFLINE"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="IsReservationRequired" type="xs:boolean" use="required"/>
+						<xs:attribute name="MaxReservationtRetention" type="xs:int" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Storage">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AccessControlList">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Right" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="CodeUserFullName" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="IsRequired" type="xs:boolean" use="required"/>
+						<xs:attribute name="MaxDocumentRetention" type="xs:int" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="DataPacketCode" type="xs:string" use="required"/>
+			<xs:attribute name="RenderCode" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

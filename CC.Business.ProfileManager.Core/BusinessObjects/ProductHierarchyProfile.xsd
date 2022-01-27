@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:hpp="urn:crif-cribiscom-producthierarchyprofile-2012-06-01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-producthierarchyprofile-2012-06-01" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ProductHierarchyProfile">
+		<xs:annotation>
+			<xs:documentation>product hierarchy profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="DataPacketProfileCode" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

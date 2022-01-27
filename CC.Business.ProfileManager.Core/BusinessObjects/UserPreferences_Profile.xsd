@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:up="urn:crif-cribiscom-userpreferences-2012-02-23" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-userpreferences-2012-02-23" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="UPP">
+		<xs:annotation>
+			<xs:documentation>User Preferences Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="SavedByUser" type="xs:boolean" use="required">
+				<xs:annotation>
+					<xs:documentation>Flag Saved by User</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="SaveDate" type="xs:dateTime" use="required">
+				<xs:annotation>
+					<xs:documentation>Date of Last Save on the profile</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="CustomerReference" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Customer Reference</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

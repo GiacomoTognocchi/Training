@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ml="urn:crif-cribiscom-marketinglist-2011-05-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-marketinglist-2011-05-24" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="Profile">
+		<xs:annotation>
+			<xs:documentation>Profile</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Anagrafica" type="xs:boolean" use="required"/>
+		<xs:attribute name="Etichetta" type="xs:boolean" use="required"/>
+		<xs:attribute name="SchedaBase" type="xs:boolean" use="required"/>
+		<xs:attribute name="SchedaStrategica" type="xs:boolean" use="required"/>
+		<xs:attribute name="SchedaStrategicaBilancio" type="xs:boolean" use="required"/>
+		<xs:attribute name="EstesoCribis" type="xs:boolean" use="required"/>
+	</xs:complexType>
+	<xs:element name="MLP">
+		<xs:annotation>
+			<xs:documentation>Marketing List Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TP" type="ml:Profile" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Target Profile</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="BC" type="ml:Profile" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Business Catalog</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

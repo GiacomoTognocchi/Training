@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 3 (x64) (http://www.altova.com) by Veronica Polonio (Gruppo Euris S.p.A.) -->
+<xs:schema xmlns:pp="urn:crif-cribiscom-marketlab-2016-07-29" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-marketlab-2016-07-29" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ML">
+		<xs:annotation>
+			<xs:documentation>MarketLab Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PMP">
+					<xs:annotation>
+						<xs:documentation>Portfolio Marketing Profile</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FP" type="pp:FavoritePortfolios">
+								<xs:annotation>
+									<xs:documentation>Favorite Portfolios</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="FavoritePortfolios">
+		<xs:attribute name="P1" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>First Favorite Portfolio Code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="P2" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Second Favorite Portfolio Code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="P3" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Third Favorite Portfolio Code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+    <xs:attribute name="P4" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>Fourth Favorite Portfolio Code</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="P5" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>Fifth Favorite Portfolio Code</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+	</xs:complexType>
+</xs:schema>

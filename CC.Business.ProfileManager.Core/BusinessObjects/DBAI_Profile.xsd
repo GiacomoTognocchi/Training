@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:db="urn:crif-cribiscom-dbai-2012-02-08" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-dbai-2012-02-08" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DBAIP">
+		<xs:annotation>
+			<xs:documentation>DBAI Elegibility Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="ProductsProfile" use="required">
+				<xs:annotation>
+					<xs:documentation>Profile for ProductData section</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Disabled"/>
+						<xs:enumeration value="Standard"/>
+						<xs:enumeration value="Trade"/>
+						<xs:enumeration value="World"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Investigation" type="xs:boolean" use="required">
+				<xs:annotation>
+					<xs:documentation>Product Code: 14898</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Monitoring" type="xs:boolean" use="required">
+				<xs:annotation>
+					<xs:documentation>Product Code: 14899</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="UniversalMonitoring" type="xs:boolean" use="required">
+				<xs:annotation>
+					<xs:documentation>Product Code: 14901</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

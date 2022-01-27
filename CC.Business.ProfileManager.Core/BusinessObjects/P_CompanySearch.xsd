@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (x64) (http://www.altova.com) by Scai SPA SCAI (SCAI) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"  xmlns:mlcs="urn:crif-cribiscom-marketinglist-searchvalues-2012-07-17" attributeFormDefault="unqualified" targetNamespace="urn:crif-cribiscom-marketinglist-searchvalues-2012-07-17">
+	<xs:element name="PSC">
+		<xs:annotation>
+			<xs:documentation>Profile Search Company</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FS">
+					<xs:annotation>
+						<xs:documentation>Financial Section</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LFP" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>List Field Profile</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="CID" type="xs:string" use="required">
+										<xs:annotation>
+											<xs:documentation>Control ID</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="V" type="xs:long" use="optional">
+										<xs:annotation>
+											<xs:documentation>Value</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="AD" type="xs:boolean" use="optional">
+										<xs:annotation>
+											<xs:documentation>Available Data</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CIS">
+					<xs:annotation>
+						<xs:documentation>Company Identification Section</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LLP" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>List legalform profile</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="IDN" type="xs:string" use="required">
+										<xs:annotation>
+											<xs:documentation>Id node</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="IC" type="xs:boolean" use="required">
+										<xs:annotation>
+											<xs:documentation>Is Checked</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

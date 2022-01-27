@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:st="urn:crif-cribiscom-storage-2009-05-14" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-storage-2009-05-14" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="SD">
+		<xs:annotation>
+			<xs:documentation>Storage Documents</xs:documentation>
+		</xs:annotation>
+		<xs:attribute ref="st:A" use="required"/>
+		<xs:attribute ref="st:D" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="SDL">
+		<xs:annotation>
+			<xs:documentation>Storage Details List</xs:documentation>
+		</xs:annotation>
+		<xs:attribute ref="st:A" use="required"/>
+		<xs:attribute ref="st:D" use="required"/>
+	</xs:complexType>
+	<xs:attribute name="T">
+		<xs:annotation>
+			<xs:documentation>Storage type</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Private"/>
+				<xs:enumeration value="Public"/>
+				<xs:enumeration value="Both"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="D" type="xs:nonNegativeInteger">
+		<xs:annotation>
+			<xs:documentation>Number of days for storage</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="A" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>Authorization</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:element name="STP">
+		<xs:annotation>
+			<xs:documentation>Storage Service Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="D" type="st:SD">
+					<xs:annotation>
+						<xs:documentation>Documents</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="DL" type="st:SDL">
+					<xs:annotation>
+						<xs:documentation>Details List</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute ref="st:T" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

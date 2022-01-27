@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 sp2 (x64) (http://www.altova.com) by SCAILAB (Crif SpA) -->
+<xs:schema xmlns:fm="urn:crif-cribiscom-fullmonitoring-2011-05-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-fullmonitoring-2011-05-24" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="FMP">
+		<xs:annotation>
+			<xs:documentation>Full Monitoring Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="POM" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Package of monitoring</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="Name" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Package name</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="RN" type="xs:boolean" use="required">
+							<xs:annotation>
+								<xs:documentation>Receive notifications</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="POR">
+					<xs:annotation>
+						<xs:documentation>Package of representatives or shareholders</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="Name" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Package name</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DP" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>delayed purchase configuration</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="AllowDelayedPurchase" type="xs:boolean" use="required">
+							<xs:annotation>
+								<xs:documentation>Allow delayed purchase</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="CompanyReport">
+							<xs:annotation>
+								<xs:documentation>Company report type for delayed purchase</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="PersonReport">
+							<xs:annotation>
+								<xs:documentation>Person report type for delayed purchase</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="PAReport">
+							<xs:annotation>
+								<xs:documentation>PA report type for delayed purchase</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CA" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>C-Alert configuration</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="CAlertMonitoring" type="xs:boolean" use="required">
+							<xs:annotation>
+								<xs:documentation>C-Alert monitoring enabled</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="CAlertUpgradeAllowed" type="xs:boolean" use="required">
+							<xs:annotation>
+								<xs:documentation>Allow C-Alert automatic upgrade</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="CAlertUpgradeType" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>C-Alert upgrade type</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="UM" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Universal Monitoring</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RUM" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Reports universal monitoring</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attribute name="RC" type="xs:string" use="required">
+										<xs:annotation>
+											<xs:documentation>Report code</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="RMT">
+							<xs:annotation>
+								<xs:documentation>Report monitoring type</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Automatic"/>
+									<xs:enumeration value="Manual"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Level" use="required">
+				<xs:annotation>
+					<xs:documentation>Service level</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Alert"/>
+						<xs:enumeration value="Full"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Monitoring" use="required">
+				<xs:annotation>
+					<xs:documentation>Monitoring enabling</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="OnDemand"/>
+						<xs:enumeration value="Auto"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Activation" type="xs:boolean" use="required">
+				<xs:annotation>
+					<xs:documentation>Monitor Activation from Report purchase</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Frequence" use="required">
+				<xs:annotation>
+					<xs:documentation>Frequence of notify</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Daily"/>
+						<xs:enumeration value="Weekly"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="FlagDisableAutoRenewal" type="xs:boolean" use="required">
+				<xs:annotation>
+					<xs:documentation>Flag to enable/disable autorenewal of monitoring</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="NotificationType">
+				<xs:annotation>
+					<xs:documentation>Notification type</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Single"/>
+						<xs:enumeration value="Aggregate"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="HideRiskInformation" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>Hides Risk Information elements in Web UI</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="SupervisorCanReviewOtherUsers" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>The supervisor can force Review Me for other users</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="ManagerCanReviewOtherUsers" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>The manager can force Review Me for other users</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="ShowPowerMonitorInSearchResults" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>## DEPRECATED ## The Power Monitor button is hidden in Search Results</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="ShowExcelUpload" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>Enabling the Bulkload funzionality</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="Mode">
+				<xs:annotation>
+					<xs:documentation>Monitoring Mode</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="PRODUCT"/>
+						<xs:enumeration value="STANDALONE"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

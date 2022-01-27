@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tr="urn:crif-cribiscom-trade-2012-03-14" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-trade-2012-03-14" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TRP">
+		<xs:annotation>
+			<xs:documentation>iTrade Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="DSO" use="required">
+				<xs:annotation>
+					<xs:documentation>DSO Type</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="DSO4"/>
+						<xs:enumeration value="DSO12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

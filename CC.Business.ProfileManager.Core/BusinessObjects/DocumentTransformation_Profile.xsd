@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by Alessandra Bellini (Crif SpA) -->
+<xs:schema xmlns:dt="urn:crif-cribiscom-doctransformation-2014-01-23" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-doctransformation-2014-01-23" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DTP">
+		<xs:annotation>
+			<xs:documentation>Document Transformation Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DT" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Document Transformation</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="RC" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Report Code</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="DTC" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Document Type Code</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="XF" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>XSLT Filename</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

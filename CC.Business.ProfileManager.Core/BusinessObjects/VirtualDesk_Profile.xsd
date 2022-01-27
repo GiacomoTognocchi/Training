@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Crif SpA (Crif SpA) -->
+<xs:schema xmlns="urn:crif-cribiscom-virtualdesk-2018-06-03" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-virtualdesk-2018-06-03" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="VDP">
+		<xs:annotation>
+			<xs:documentation>Virtual Desk Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FOLDER1" type="FolderDefinition"/>
+				<xs:element name="FOLDER2" type="FolderDefinition"/>
+				<xs:element name="FOLDER3" type="FolderDefinition"/>
+				<xs:element name="FOLDER4" type="FolderDefinition"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="FolderDefinition">
+		<xs:annotation>
+			<xs:documentation>Virtual Folder Definition</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Code" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Folder code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>
