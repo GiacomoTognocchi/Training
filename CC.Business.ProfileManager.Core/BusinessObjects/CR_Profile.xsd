@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Crif SpA (Crif SpA) -->
+<xs:schema xmlns:cr="urn:crif-cribiscom-companyreport-2010-11-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-companyreport-2010-11-24" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="CCRP">
+		<xs:annotation>
+			<xs:documentation>Custom Company Report Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SLOT1" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT2" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT3" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT4" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT5" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT6" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT7" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT8" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT9" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT10" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT11" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT12" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT13" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT14" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT15" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT16" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT17" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT18" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT19" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT20" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT21" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT22" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT23" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT24" type="cr:ReportDefinition"/>
+				<xs:element name="SLOT25" type="cr:ReportDefinition"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ReportDefinition">
+		<xs:annotation>
+			<xs:documentation>Company Report Definition</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="PC" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

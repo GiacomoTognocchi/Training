@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:fp="urn:crif-cribiscom-functionprofile-2012-06-01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-functionprofile-2012-06-01" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="FunctionProfile">
+		<xs:annotation>
+			<xs:documentation>Function profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Process">
+					<xs:complexType>
+						<xs:attribute name="PID" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Process ID</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="PV" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Process Version</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="S" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Service</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="FF" type="xs:boolean" use="required">
+							<xs:annotation>
+								<xs:documentation>Flag Free Of Charge</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="FA" type="xs:boolean" use="required">
+							<xs:annotation>
+								<xs:documentation>Flag Assistant</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="T" type="xs:int" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="FunctionCode" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

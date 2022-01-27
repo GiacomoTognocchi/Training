@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp2 (x64) (http://www.altova.com) by sanbozz (Crif SpA) -->
+<xs:schema xmlns:nt="urn:crif-cribiscom-notifications-2011-05-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-notifications-2011-05-24" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="NTP">
+		<xs:annotation>
+			<xs:documentation>Notifications Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="NT" type="nt:NotificationType" use="required">
+				<xs:annotation>
+					<xs:documentation>Notifications Type</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="PME" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Power Monitor Email</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="PMADL" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Power Monitor Administrator Distribution List</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="AT" use="optional">
+				<xs:annotation>
+					<xs:documentation>Attachment Type</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nt:AttachmentType"/>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="SAE" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Sending Attachment Email</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="SAS" type="xs:dateTime" use="optional">
+				<xs:annotation>
+					<xs:documentation>Sending Attachment Start</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="SAOR" use="optional">
+				<xs:annotation>
+					<xs:documentation>Send Attachment On Renew</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nt:AttachmentOnRenewType"/>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="NotificationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Web"/>
+			<xs:enumeration value="Mail"/>
+			<xs:enumeration value="WebAndMail"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AttachmentType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PDF"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AttachmentOnRenewType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="SendOnRenew"/>			
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

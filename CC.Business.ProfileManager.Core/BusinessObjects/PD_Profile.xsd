@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:dp="urn:crif-cribiscom-decisionprocess-2011-02-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-decisionprocess-2011-02-24" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DPP">
+		<xs:annotation>
+			<xs:documentation>Decision Process Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="DPC" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Decision Process Code</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="SC" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>Schema Code</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

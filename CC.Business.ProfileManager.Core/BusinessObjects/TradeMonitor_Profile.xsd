@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns="urn:crif-cribiscom-trade_monitoring-2015-11-13" targetNamespace="urn:crif-cribiscom-trade_monitoring-2015-11-13" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="TradeMonitor">
+    <xs:annotation>
+      <xs:documentation>Profilo per abilitare e gestire la messa in monitoraggio automatica delle posizioni su TradePowerMonitor</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="Enabled" type="xs:boolean" use="required">
+        <xs:annotation>
+          <xs:documentation>Indica l'abilitazione al servizio</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="User" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation>Lo user da usare per l'abilitazione</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="Product" type="xs:string" use="required">
+        <xs:annotation>
+          <xs:documentation>Il cordice report da abilitare</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="Delayed" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Da mettere se si desidera fare acquisto ritardato</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

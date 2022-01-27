@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by Alessandra Bellini (Crif SpA) -->
+<xs:schema xmlns:bl="urn:crif-cribiscom-balance-2011-09-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-balance-2011-09-24" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="BP">
+		<xs:annotation>
+			<xs:documentation>Balance Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="B">
+					<xs:complexType>
+						<xs:attribute name="T" use="required">
+							<xs:annotation>
+								<xs:documentation>Type</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="INT"/>
+									<xs:enumeration value="RIC"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

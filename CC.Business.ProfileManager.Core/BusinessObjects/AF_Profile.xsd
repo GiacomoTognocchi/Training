@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Crif SpA (Crif SpA) -->
+<xs:schema xmlns:cr="urn:crif-cribiscom-companyreport-2010-11-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:af="urn:crif-cribiscom-antifraud_antilaundering-2015-02-16" targetNamespace="urn:crif-cribiscom-antifraud_antilaundering-2015-02-16" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="AFP">
+		<xs:annotation>
+			<xs:documentation>Anti Fraud Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PRODUCT" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="af:ProductDefinition"/>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ProductDefinition">
+		<xs:annotation>
+			<xs:documentation>Product Definition</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InputItem" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OptionItems" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="Key" type="xs:string" use="optional">
+									<xs:annotation>
+										<xs:documentation>Key Element</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="Value" type="xs:string" use="optional">
+									<xs:annotation>
+										<xs:documentation>Value</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+								<xs:attribute name="CodeLabel" type="xs:string">
+									<xs:annotation>
+										<xs:documentation>Uid localizable</xs:documentation>
+									</xs:annotation>
+								</xs:attribute>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="InputType" use="required">
+						<xs:annotation>
+							<xs:documentation>Input Type</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="Text"/>
+								<xs:enumeration value="DropDown"/>
+								<xs:enumeration value="Radio"/>
+								<xs:enumeration value="CheckBox"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="Key" type="xs:string" use="required">
+						<xs:annotation>
+							<xs:documentation>Key Element</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="InputLabel" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Label Value </xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="DefaultValue" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Default Value</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="PC" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Product code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="TP" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Profile Type</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="TPR" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Product Type Risk</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="VN" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>View Name</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="PID" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Process Id</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="SID" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Service Id</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="PNS" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Process Namespace</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="MN" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Model Name</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

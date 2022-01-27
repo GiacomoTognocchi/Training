@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (x64) (http://www.altova.com) by Crif SpA (Crif SpA) -->
+<xs:schema xmlns:rp="urn:crif-cribiscom-reportpurchase-2011-05-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-reportpurchase-2011-05-24" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="RPP">
+        <xs:annotation>
+            <xs:documentation>Report Purchase Profile</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="DCR" use="required">
+                <xs:annotation>
+                    <xs:documentation>Default Report for Company Search Page</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="DCRLT" use="required">
+                <xs:annotation>
+                    <xs:documentation>Default Report for Company LT Search Page</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="DPR" use="required">
+                <xs:annotation>
+                    <xs:documentation>Default Report for Person Search Page</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="DPRLT" use="required">
+                <xs:annotation>
+                    <xs:documentation>Default Report for Person LT Search Page</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="DCRPA" use="required">
+                <xs:annotation>
+                    <xs:documentation>Default Report forPublic Administration Search Page</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="DCRMC" use="required">
+                <xs:annotation>
+                    <xs:documentation>Default Report Mastercard for Company LT Search Page</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

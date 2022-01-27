@@ -1,0 +1,6 @@
+{
+  "_comment": "Set ApplicationName value as a name in IIS, RelativeApplicationPath as a Application Pool name in IIS, Portnumber as a port",
+  "ApplicationName": "CC.Business.ProfileManagerUpdate.WebApi",
+  "Portnumber": 6155,
+  "RelativeApplicationPath": "CC.Business.ProfileManagerUpdate.WebApi"
+}

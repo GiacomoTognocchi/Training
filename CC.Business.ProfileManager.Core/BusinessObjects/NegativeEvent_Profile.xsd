@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by Alessandra Bellini (Crif SpA) -->
+<xs:schema xmlns:ne="urn:crif-cribiscom-negativeevent-2011-08-31" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-negativeevent-2011-08-31" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="NEP">
+		<xs:annotation>
+			<xs:documentation>Negative Event Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NE">
+					<xs:annotation>
+						<xs:documentation>Direct Negative Event</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="RL" type="xs:string" use="required"/>
+						<xs:attribute name="EP" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="INE" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indirect Negative Event</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="RL" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

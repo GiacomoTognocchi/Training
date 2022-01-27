@@ -1,0 +1,14 @@
+[
+	{
+		 "Path": "NamingServiceUrl",
+		 "Keyname": "NamingServiceUrl"
+	},
+  {
+    "Path": "ProfileStoreConnectionString",
+    "Keyname": "CCBTCPROF_ConnectionString"
+  },
+	{
+		"Path": "CCEnvironment",
+		"Keyname": "CCEnvironment"
+	}
+]

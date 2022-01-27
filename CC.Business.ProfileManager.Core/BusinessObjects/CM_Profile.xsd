@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp2 (x64) (http://www.altova.com) by Alessandra Bellini (Crif SpA) -->
+<xs:schema xmlns:cm="urn:crif-cribiscom-continuousmonitor-2016-10-21" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-continuousmonitor-2016-10-21" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="CMP">
+		<xs:annotation>
+			<xs:documentation>Continuous Monitor Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="ICM" type="xs:boolean" use="optional">
+				<xs:annotation>
+					<xs:documentation>Is Continuous Monitor</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

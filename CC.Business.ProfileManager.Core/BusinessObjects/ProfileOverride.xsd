@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:cp="urn:crif-cribiscom-profile:2009-02-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-profile:2009-02-24" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PO">
+		<xs:annotation>
+			<xs:documentation>Profile override</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ND" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Namespace declaration</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="P" type="xs:anyURI" use="required">
+							<xs:annotation>
+								<xs:documentation>Prefix</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="N" type="xs:anyURI" use="required">
+							<xs:annotation>
+								<xs:documentation>Name</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="O" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Override</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="X" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>XPath</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="V" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>Value</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

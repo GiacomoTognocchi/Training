@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:pp="urn:crif-cribiscom-pilot-2011-05-24" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-pilot-2011-05-24" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PLP">
+		<xs:annotation>
+			<xs:documentation>Pilot Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="C" type="pp:PilotProducts">
+					<xs:annotation>
+						<xs:documentation>Company Products</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="CLT" type="pp:PilotProducts">
+					<xs:annotation>
+						<xs:documentation>Company LT Products</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="P" type="pp:PilotProducts">
+					<xs:annotation>
+						<xs:documentation>Person Products</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PLT" type="pp:PilotProducts">
+					<xs:annotation>
+						<xs:documentation>Person LT Products</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="PPL" type="xs:boolean" use="required">
+				<xs:annotation>
+					<xs:documentation>Purchase Page Link</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="PilotProducts">
+		<xs:attribute name="PC1" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>First Pilot Product Code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="PC2" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Second Pilot Product Code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="PC3" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Third Pilot Product Code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

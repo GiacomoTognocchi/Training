@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by Alessandra Bellini (Crif SpA) -->
+<xs:schema xmlns:ne="urn:crif-cribiscom-monitornegativeevent-2013-12-01" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:crif-cribiscom-monitornegativeevent-2013-12-01" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="MonitorNegativeEventProfile">
+		<xs:annotation>
+			<xs:documentation>Negative Event Profile</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IndirectNotifications">
+					<xs:annotation>
+						<xs:documentation>Indirect Negative Event</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="RolesToExclude" type="xs:string" use="required"/>
+						<xs:attribute name="MinEquityPercentage" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

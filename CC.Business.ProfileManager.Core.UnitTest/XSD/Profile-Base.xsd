@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:pb="urn:profile-base:2009" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:profile-base:2009" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="UIColors">
+		<xs:sequence>
+			<xs:element name="BackGround" type="pb:Color"/>
+			<xs:element name="TableBorder" type="pb:Color"/>
+			<xs:element name="TableFont" type="pb:Color"/>
+			<xs:element name="TitleFont" type="pb:Color"/>
+			<xs:element name="BodyFont" type="pb:Color"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Color">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Black"/>
+			<xs:enumeration value="White"/>
+			<xs:enumeration value="Yellow"/>
+			<xs:enumeration value="Blue"/>
+			<xs:enumeration value="Red"/>
+			<xs:enumeration value="Green"/>
+			<xs:enumeration value="Cyan"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
